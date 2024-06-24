@@ -24,6 +24,14 @@ app.use(cors({
   allowedHeaders: ['Content-Type'],
 }));
 
+// Set CORS headers manually
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://passop-frontend.onrender.com');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 // MongoDB Connection
 async function connectToDatabase() {
   try {
