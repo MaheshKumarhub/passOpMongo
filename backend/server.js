@@ -6,7 +6,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = 'https://passop-frontend.onrender.com';
 const client = new MongoClient(url);
 
 // Database Name
