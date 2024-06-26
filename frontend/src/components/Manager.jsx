@@ -38,12 +38,12 @@ const Manager = () => {
   const copyText = (text)=>{
     toast('copied to clipboard!', {
       position: "top-right",
-      autoClose: 5000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
-      pauseOnHover: true,
+      pauseOnHover: false,
       draggable: true,
-      progress: undefined,
+      
       theme: "dark",
 
       });
@@ -81,12 +81,12 @@ const Manager = () => {
 
     toast('Password saved !', {
       position: "top-right",
-      autoClose: 5000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
-      pauseOnHover: true,
+      pauseOnHover: false,
       draggable: true,
-      progress: undefined,
+      
       theme: "dark",
 
       });
@@ -107,13 +107,13 @@ const Manager = () => {
         setPasswordArray(passwordArray.filter(item => item.id !== id));
         toast('Password deleted!', {
           position: "top-right",
-          autoClose: 5000,
+          autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
-          pauseOnHover: true,
+          pauseOnHover: false,
           draggable: true,
-          progress: undefined,
-          theme: "dark",
+         
+          theme: "green",
         });
       }
     } catch (error) {
