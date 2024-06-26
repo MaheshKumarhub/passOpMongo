@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const { MongoClient, ObjectId } = require('mongodb'); // Import ObjectId
+const { MongoClient, ObjectId } = require('mongodb');
 const cors = require('cors');
 require('dotenv').config();
 
@@ -20,8 +20,8 @@ app.use(bodyParser.json());
 // CORS configuration
 app.use(cors({
   origin: 'https://passop-frontend.onrender.com',
-  methods: ['GET', 'POST', 'DELETE'],
-  allowedHeaders: ['Content-Type'],
+  methods: ['GET', 'POST', 'DELETE'], 
+  allowedHeaders: ['Content-Type'], 
 }));
 
 // MongoDB Connection
@@ -56,13 +56,8 @@ app.delete('/', async (req, res) => {
   const { id } = req.body;
   const db = client.db(dbName);
   const collection = db.collection('passwords');
-  try {
-    const deleteResult = await collection.deleteOne({ _id: new ObjectId(id) }); // Convert id to ObjectId
-    res.json({ success: true, result: deleteResult });
-  } catch (err) {
-    console.error('Error deleting document', err);
-    res.status(500).json({ success: false, error: 'Failed to delete document' });
-  }
+  const deleteResult = await collection.deleteOne({ _id: new ObjectId(id) });
+  res.json({ success: true, result: deleteResult });
 });
 
 // Start server
