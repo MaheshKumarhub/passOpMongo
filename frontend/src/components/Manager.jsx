@@ -40,7 +40,7 @@ const Manager = () => {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
-      closeOnClick: true,
+      closeOnClick: false,
       pauseOnHover: false,
       draggable: true,
       
@@ -83,7 +83,7 @@ const Manager = () => {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
-      closeOnClick: true,
+      closeOnClick: false,
       pauseOnHover: false,
       draggable: true,
       
@@ -109,11 +109,11 @@ const Manager = () => {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
-          closeOnClick: true,
+          closeOnClick: false,
           pauseOnHover: false,
           draggable: true,
          
-          theme: "green",
+          theme: "dark",
         });
       }
     } catch (error) {
