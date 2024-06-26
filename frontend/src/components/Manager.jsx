@@ -90,29 +90,30 @@ const Manager = () => {
   };
 
   const deletePassword = async (id) => {
-    console.log("Deleting Password with id", id);
-    let c = confirm("Do you really want to delete this password?");
-    if (c) {
-      setPasswordArray(passwordArray.filter(item => item.id !== id));
+  console.log("Deleting Password with id", id);
+  let c = confirm("Do you really want to delete this password?");
+  if (c) {
+    setPasswordArray(passwordArray.filter(item => item.id !== id));
 
-      let res = await fetch("https://passop-backend.onrender.com", {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id })
-      });
+    let res = await fetch("https://passop-backend.onrender.com", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id })
+    });
 
-      toast('Password Deleted', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
-    }
-  };
+    toast('Password Deleted', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  }
+};
+
 
   const editPassword = (id) => {
     console.log("Editing Password with id", id);
