@@ -111,9 +111,10 @@ const Manager = () => {
           hideProgressBar: false,
           closeOnClick: false,
           pauseOnHover: false,
-          toastify-color-progress-dark: #096122;
-          
-         
+          style: {
+          background: '#096122',  // Set the background color for the toast
+         color: '#fff'  // Set the text color
+        },
           theme: "dark",
         });
       }
