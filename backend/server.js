@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const { MongoClient, ObjectId } = require('mongodb');
+const { MongoClient } = require('mongodb');
 const cors = require('cors');
 require('dotenv').config();
 
@@ -56,11 +56,11 @@ app.delete('/', async (req, res) => {
   const { id } = req.body;
   const db = client.db(dbName);
   const collection = db.collection('passwords');
-  const deleteResult = await collection.deleteOne({ _id: new ObjectId(id) });
+  const deleteResult = await collection.deleteOne({ _id: id });
   res.json({ success: true, result: deleteResult });
 });
 
 // Start server
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(Server is running on http://localhost:${port});
 });
