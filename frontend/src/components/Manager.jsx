@@ -38,7 +38,7 @@ const Manager = () => {
   const copyText = (text)=>{
     toast('copied to clipboard!', {
       position: "top-right",
-      autoClose: 3000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: false,
       pauseOnHover: false,
@@ -81,7 +81,7 @@ const Manager = () => {
 
     toast('Password saved !', {
       position: "top-right",
-      autoClose: 3000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: false,
       pauseOnHover: false,
@@ -107,7 +107,7 @@ const Manager = () => {
         setPasswordArray(passwordArray.filter(item => item.id !== id));
         toast('Password deleted!', {
           position: "top-right",
-          autoClose: 3000,
+          autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: false,
           pauseOnHover: false,
