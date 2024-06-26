@@ -42,7 +42,7 @@ const Manager = () => {
       hideProgressBar: false,
       closeOnClick: false,
       pauseOnHover: false,
-      draggable: true,
+      
       
       theme: "dark",
 
@@ -85,7 +85,7 @@ const Manager = () => {
       hideProgressBar: false,
       closeOnClick: false,
       pauseOnHover: false,
-      draggable: true,
+      
       
       theme: "dark",
 
@@ -111,7 +111,7 @@ const Manager = () => {
           hideProgressBar: false,
           closeOnClick: false,
           pauseOnHover: false,
-          draggable: true,
+          
          
           theme: "dark",
         });
@@ -141,14 +141,13 @@ const Manager = () => {
     <>
     <ToastContainer
 position="top-right"
-autoClose={5000}
+autoClose={2000}
 hideProgressBar={false}
 newestOnTop={false}
 closeOnClick
 rtl={false}
 pauseOnFocusLoss
-draggable
-pauseOnHover
+
 theme="light"
 transition= "Bounce"
 />
