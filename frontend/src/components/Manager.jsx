@@ -111,6 +111,7 @@ const Manager = () => {
           hideProgressBar: false,
           closeOnClick: false,
           pauseOnHover: false,
+          toastify-color-progress-dark: #096122;
           
          
           theme: "dark",
